@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    const rotateArray = function(arr, k) {
+    const len = arr.length;
+    const rotatedArray = arr.slice(len - k % len).concat(arr.slice(0, len - k % len));
+    return rotatedArray;
+};
+
+
+const originalArray = [1, 2, 3, 4, 5];
+const k = 2;
+const rotatedArray = rotateArray(originalArray, k);
+console.log(rotatedArray);
+   </script> 
+</body>
+</html>

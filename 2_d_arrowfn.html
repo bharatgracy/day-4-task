@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const isPrime = (num) => {
+    if (num <= 1) return false;
+    if (num === 2) return true;
+    if (num % 2 === 0) return false;
+    for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+
+const findPrimeNumbers = (arr) => arr.filter((num) => isPrime(num));
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const primeNumbers = findPrimeNumbers(numbers);
+console.log(primeNumbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ let isPalindrome=function (str) {
+    // Convert the string to lowercase and remove non-alphanumeric characters
+    const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    // Check if the clean string is equal to its reverse
+    return cleanStr === cleanStr.split('').reverse().join('');
+}
+
+ let findPalindromes=function (arr) {
+    const palindromes = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPalindrome(arr[i])) {
+            palindromes.push(arr[i]);
+        }
+    }
+    return palindromes;
+}
+
+const inputArray = ["radar", "level", "hello", "racecar", "12321", "test", "deified"];
+const palindromeArray = findPalindromes(inputArray);
+
+console.log("Palindromes in the array:", palindromeArray);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const inputArray = ["radar", "level", "hello", "racecar", "12321", "test", "deified"]
+const palindromeArray = (function(arr) {
+    function isPalindrome(str) {
+        const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+        return cleanStr === cleanStr.split('').reverse().join('');
+    }
+
+    const palindromes = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPalindrome(arr[i])) {
+            palindromes.push(arr[i]);
+        }
+    }
+    return palindromes;
+})(inputArray);
+
+console.log("Palindromes in the array:", palindromeArray);
+
+    </script>
+</body>
+</html>

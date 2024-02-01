@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+   const isPalindrome = (str) => {
+    const reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+};
+
+const findPalindromes = (arr) => arr.filter((str) => isPalindrome(str));
+
+
+const strings = ["level", "noon", "hello", "radar", "world", "madam"];
+const palindromes = findPalindromes(strings);
+console.log(palindromes);
+    </script>
+</body>
+</html>
